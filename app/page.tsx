@@ -82,7 +82,7 @@ export default function Home() {
               <h1 className="hero-headline">Trang này trống?</h1>
               <p className="muted-paragraph mt-6">Thật ra thì, một thứ tuyệt vời đang được xây dựng ở đây đó!<br/>Chúng ta cùng đợi nhé!<br/><br/>Bạn cũng muốn build một cái sao? bấm cái nút ở dưới để chúng mình giúp nhé!</p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <a href="#" className="outlined-button w-full sm:w-auto text-center">TUI CŨNG MUỐN!</a>
+                <a href="https://cloudcode.io.vn" className="outlined-button w-full sm:w-auto text-center">TUI CŨNG MUỐN!</a>
               </div>
             </div>
           </div>
