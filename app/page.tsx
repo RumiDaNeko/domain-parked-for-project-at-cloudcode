@@ -20,6 +20,10 @@ export default function Home() {
     setTheme(prefersDark ? 'dark' : 'light')
     if (prefersDark) document.documentElement.classList.add('dark')
     else document.documentElement.classList.remove('dark')
+    // enable transitions after hydration to avoid SSR snap
+    if (typeof window !== 'undefined') {
+      setTimeout(() => document.documentElement.classList.add('transitions-ready'), 50)
+    }
   }, [])
 
   useEffect(() => {
