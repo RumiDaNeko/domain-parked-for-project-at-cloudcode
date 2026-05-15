@@ -8,9 +8,8 @@ import { Geist_Mono, Geist_Mono as V0_Font_Geist_Mono } from 'next/font/google'
 const _geistMono = V0_Font_Geist_Mono({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900"] })
 
 export const metadata: Metadata = {
-  title: 'Creative Mind - Design & Code Portfolio',
-  description: 'Explore my portfolio of beautiful, interactive digital experiences built with modern design and code. Let\'s build something amazing together.',
-  generator: 'v0.app',
+  title: 'Ohhh.....',
+  description: 'This website is under construction. We are building something amazing here! Stay tuned! If you also want to build one, get in touch!',
   icons: {
     icon: [
       {
@@ -21,12 +20,8 @@ export const metadata: Metadata = {
         url: '/cloudcodeLogo-white.png',
         media: '(prefers-color-scheme: dark)',
       },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
     ],
-    apple: '/apple-icon.png',
+    apple: '/Cloudcode-black-round.png',
   },
 }
 
