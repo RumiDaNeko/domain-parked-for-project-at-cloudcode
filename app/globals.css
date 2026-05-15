@@ -354,3 +354,50 @@ body::after {
 @media (min-width: 1280px) {
   .hero-grid { padding: 6rem 8rem; }
 }
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+  .hero-grid {
+    padding: 1.5rem 1.25rem 4.5rem; /* extra bottom space to avoid clipping */
+    background-size: 48px 48px;
+    background-image:
+      linear-gradient(to right, color-mix(in srgb, var(--foreground) 4%, transparent) 1px, transparent 1px),
+      linear-gradient(to bottom, color-mix(in srgb, var(--foreground) 4%, transparent) 1px, transparent 1px);
+    padding-bottom: calc(1.5rem + env(safe-area-inset-bottom));
+  }
+  .hero-headline {
+    font-size: clamp(1.8rem, 8vw, 3rem);
+    line-height: 1.02;
+  }
+  .muted-paragraph {
+    font-size: 0.98rem;
+  }
+  .outlined-button {
+    padding: 0.9rem 1rem;
+  }
+}
+
+/* Remove rounded/card look and make hero full-bleed on very small screens */
+@media (max-width: 640px) {
+  .hero-grid {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    margin: 0 auto;
+    width: 100%;
+    background-clip: border-box;
+    overflow: visible;
+  }
+}
+
+/* ensure no parent container shows as a rounded card on mobile */
+@media (max-width: 640px) {
+  .hero-grid,
+  .hero-grid > div,
+  .hero-grid * {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background-clip: border-box !important;
+  }
+}
+
+/* host visibility handled via Tailwind responsive utilities */
